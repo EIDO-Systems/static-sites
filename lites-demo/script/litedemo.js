@@ -82,15 +82,16 @@ $(document).on('eidodoc:exception', function (event, data) {
  */
 var territories = []
 var docs = []
+var defaultTerritory = 'UK'
 $(document).ready(function () {
   $(document).trigger('eidodoc:listterritories', {
     callback: List_Territories
   })
   $(document).trigger('eidodoc:index', {
-    territory: 'AUS', callback: List_Docnames
+    territory: defaultTerritory, callback: List_Docnames
   })
   $(document).trigger('eidodoc:listdocs', {
-    territory: 'AUS', callback: List_Docs
+    territory: defaultTerritory, callback: List_Docs
   })
   $('#index').on('click', function (e) {
     var docnum = $(e.target).attr('data-docnum')
@@ -132,6 +133,9 @@ $(document).ready(function () {
         $('#territory').append('<option>' + value + '</option>')
       }
     })
+    if ($('#territory option[value="' + defaultTerritory + '"]').length > 0) {
+      $('#territory').val(defaultTerritory)
+    }
   }
   /**
      * populates dpcuments drop down with options
