@@ -128,9 +128,11 @@ $(document).ready(function () {
 	 */
   function List_Territories (Territories) {
     territories = Territories
+    $('#territory').html('')
     $.each(territories, function (index, value) {
       if (value != 'images' && value != 'WALES') {
-        $('#territory').append('<option>' + value + '</option>')
+        var selected = value === defaultTerritory ? ' selected="selected"' : ''
+        $('#territory').append('<option value="' + value + '"' + selected + '>' + value + '</option>')
       }
     })
     if ($('#territory option[value="' + defaultTerritory + '"]').length > 0) {
