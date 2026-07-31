@@ -1,13 +1,16 @@
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!doctype html>
+<html lang="en">
     <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Radar Healthcare Lites Demo Center</title>
-        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
-        <link rel="stylesheet" type="text/css" href="css/litedemo.css"/>
-        <script src="https://sdk.amazonaws.com/js/aws-sdk-2.4.5.min.js"/>
-        <script type="text/javascript" src="script/jquery-3.1.1.min.js"/>
-        <script type="text/javascript" src="script/bootstrap.min.js"/>
-        <script type="text/javascript" src="script/EIDO_S3Document.js"/>
-        <script type="text/javascript" src="script/litedemo.js"/>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/litedemo.css">
+        <script src="https://sdk.amazonaws.com/js/aws-sdk-2.4.5.min.js"></script>
+        <script type="text/javascript" src="script/jquery-3.1.1.min.js"></script>
+        <script type="text/javascript" src="script/bootstrap.min.js"></script>
+        <script type="text/javascript" src="script/EIDO_S3Document.js"></script>
+        <script type="text/javascript" src="script/litedemo.js"></script>
     </head>
     <body style="overflow-y:hidden;">
         <div class="page-wrapper">
@@ -17,22 +20,22 @@
                 </div>
                 <div class="right-nav">
                     <button type="button" class="btn btn-default" onclick="$('#instructions-modal').modal('show')">Help</button>
-                    <select style="width:100px; padding:4px;display:inline-block;" name="territory" id="territory"/>
-                    <select style="width:100px; padding:4px;display:inline-block;" name="filename" id="filename"/>
+                    <select style="width:100px; padding:4px;display:inline-block;" name="territory" id="territory"></select>
+                    <select style="width:100px; padding:4px;display:inline-block;" name="filename" id="filename"></select>
                     <a class="logo" href="http://www.radarhealthcare.com" target="_blank">
-                        <img src="images/radar-logo-full-colour.png" alt="Radar Healthcare"/>
+                        <img src="images/radar-logo-full-colour.png" alt="Radar Healthcare">
                     </a>
                 </div>
             </div>            
             <div class="container">
                 <div class="form-group row">
                     <div class="col-sm-4" style="margin-top:20px;">
-                        <div id="index"/>
+                        <div id="index"></div>
                     </div>
                     <div class="col-sm-8" style="margin-top:20px;">
                         <div class="docviewer">
-                            <div id="pdflink" class="pull-right"/>
-                            <div id="result"/>
+                            <div id="pdflink" class="pull-right"></div>
+                            <div id="result"></div>
                         </div>
                     </div>
                 </div>
@@ -41,7 +44,7 @@
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fa fa-times-circle" aria-hidden="true"/></span></button>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                             <h4 class="modal-title">Implementation Notes</h4>
                         </div>
                         <div class="modal-body">
@@ -86,7 +89,6 @@ function getEIDOLiteDoc(territory, docnum, target){
                     </div>
                 </div>
             </div>
-            
-       </div>
+        </div>
     </body>
 </html>
